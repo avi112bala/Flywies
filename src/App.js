@@ -3,6 +3,7 @@ import "./App.css";
 import LoginAdmin from "./Pages/Login";
 import SubAdminLogin from "./Pages/SubAdminLogin";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import StatsCards from "./Components/StatusCard";
 import HomePage from "./Pages/HomePage";
 
 function App() {
@@ -11,9 +12,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route>
-            <Route index path="/" element={<HomePage/>} />
-            <Route  path="/login" element={<LoginAdmin/>} />
-            <Route  path="/subadmin" element={<SubAdminLogin/>} />
+            <Route index path="/" element={<HomePage />} />
+            <Route path="/login" element={<LoginAdmin />} />
+            <Route path="/subadmin" element={<SubAdminLogin />} />
+            <Route path="/status" element={<StatsCards />} />
           </Route>
         </Routes>
       </BrowserRouter>

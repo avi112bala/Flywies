@@ -6,7 +6,7 @@ const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://veocab-proje
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
@@ -18,6 +18,11 @@ export const loginAdmin = async (data) => {
     const response = await api.post('/admin/login', data);
     return response.data;
   }
+
+  export const allcount = async (data) => {
+    const response = await api.get("/admin/allcount", data);
+    return response.data;
+  };
 
   export const loginsubAdmin = async (data) => {
     const response = await api.post("/admin/partner/registration", data);
