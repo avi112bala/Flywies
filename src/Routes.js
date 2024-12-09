@@ -19,6 +19,11 @@ export const loginAdmin = async (data) => {
     return response.data;
   }
 
+  export const loginsubAdmin = async (data) => {
+    const response = await api.post("/admin/partner/registration", data);
+    return response.data;
+  };
+
   export const getAdminProfile = async (token) => {
     api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     const response = await api.get('/admin/getprofile');
