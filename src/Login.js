@@ -26,13 +26,14 @@ const LoginAdmin = () => {
         <div className='container'>
             <div className='row'>
                 <div className='col-md-12'>
-                    <div className='col-md-6 text-center' style={{height:"1000px",    background: "linear-gradient(180deg, #121744 0%, #2D3AAA 100%)"
-}}>
-                        <form onSubmit={handleSubmit}>
-                            <input type="email" name="email" placeholder="Email" onChange={handleChange} />
-                            <input type="password" name="password" placeholder="Password" onChange={handleChange} />
-                            <button type="submit">Login</button>
-                        </form>
+                    <div className='col-md-6 text-center' style={{ height: "1000px", background: "linear-gradient(180deg, #121744 0%, #2D3AAA 100%)" }}>
+                        <div className='col-md-12 justify-content-center align-item-center'>
+                            <form onSubmit={handleSubmit}>
+                                <span className='d-block'> <input type="email" name="email" placeholder="Email" onChange={handleChange} /></span>
+                                <span className='d-block mt-2'> <input type="password" name="password" placeholder="Password" onChange={handleChange} /></span>
+                                <button type="submit">Login</button>
+                            </form>
+                        </div>
                     </div>
                     <div className='col-md-6'>
 
